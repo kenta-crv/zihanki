@@ -101,6 +101,7 @@ Rails.application.routes.draw do
   get 'estimates/:id/accept', to: 'estimates#accept', as: 'accept_estimate'
   get 'estimates/:id/decline', to: 'estimates#decline', as: 'decline_estimate'
 
+  get 'information' => 'top#information' #社外周知
   # メッセージ
   resources :messages, only: [:create] do
     collection do

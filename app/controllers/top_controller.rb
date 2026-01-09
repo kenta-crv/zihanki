@@ -8,6 +8,9 @@ class TopController < ApplicationController
   def original 
   end
 
+  def information
+  end
+
   def business
   end
 
