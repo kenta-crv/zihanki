@@ -1,7 +1,35 @@
 doctype html
 html
   head
-   = render template: 'layouts/_head.html.slim'
+   meta[charset="utf-8"]
+   meta[http-equiv="X-UA-Compatible" content="IE=edge"]
+   meta[name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"]
+   = csrf_meta_tags
+   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+   /script[src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"]
+   = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+   = display_meta_tags(default_meta_tags)
+   = favicon_link_tag('favicon.ico')
+   style 
+    | :root {
+    |   --main-color: #{main_color};
+    | }
+   / Google tag (gtag.js)
+   script async=true src="https://www.googletagmanager.com/gtag/js?id=G-VV4DW25V61"
+   script
+     |
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'G-VV4DW25V61');
+   / Google タグ gtag.js
+   script async src="https://www.googletagmanager.com/gtag/js?id=AW-10998015402"
+   script
+     |
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'AW-10998015402');
   header
       .row
         .col-xs-3
