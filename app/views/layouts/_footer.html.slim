@@ -20,10 +20,3 @@ footer
     = link_to "大塚自動販売機ページ", otsuka_path
     br
   br/
-  br/
-  .maker 【自動販売機記事一覧】
-  .row.left
-    - @columns.each do |column|
-      .link.col-xs-6.height
-       = link_to column.title, column_path(column.id)
-       br

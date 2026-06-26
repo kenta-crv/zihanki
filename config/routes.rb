@@ -50,11 +50,7 @@ Rails.application.routes.draw do
   get 'corporation' => 'top#corporation'  #会社概要
   get 'privacy' => 'top#privacy' #プライバシーポリシー
 
-  resources :columns do
-    collection do 
-      post :import
-    end
-  end
+
   resources :questions
 
   resources :purchases do
@@ -112,6 +108,8 @@ Rails.application.routes.draw do
   resources :payments, only: [:index]
   post 'update_payments', to: 'payments#bulk_update'
   resources :companies
+  
+  get 'columns',         to: 'top#columns'
 
   #get '*path', controller: 'application', action: 'render_404'
 end

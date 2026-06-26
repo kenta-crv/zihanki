@@ -10,7 +10,7 @@ Bundler.require(*Rails.groups)
 module Eatery
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.1
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja

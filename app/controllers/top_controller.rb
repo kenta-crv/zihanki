@@ -83,4 +83,6 @@ class TopController < ApplicationController
 
   def food 
   end
+
+  def columns; end
 end
