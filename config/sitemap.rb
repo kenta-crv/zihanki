@@ -1,7 +1,7 @@
 require 'net/http'
 require 'nokogiri'
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://xn--new351c2sh.net/"
+SitemapGenerator::Sitemap.default_host = "https://xn--new351c2sh.net"
 
 SitemapGenerator::Sitemap.create do
   add "/" , changefreq: 'daily', priority: 1.0
