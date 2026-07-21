@@ -1,4 +1,14 @@
 footer
+  .maker 【お役立ち記事】
+  .row.left
+    .link.col-xs-12.height
+      = link_to "記事一覧を見る", "/columns"
+      br
+    - featured_columns_for(:top).first(3).each do |item|
+      .link.col-xs-12.height
+        = link_to item[:title].truncate(40), item[:path]
+        br
+  br/
   .maker 【各メーカー別ページ】
   .row.left
    .link.col-xs-6.height
@@ -18,5 +28,8 @@ footer
     br
    .link.col-xs-6.height
     = link_to "大塚自動販売機ページ", otsuka_path
+    br
+   .link.col-xs-6.height
+    = link_to "サントリー自動販売機ページ", suntory_path
     br
   br/

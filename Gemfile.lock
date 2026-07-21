@@ -423,6 +423,7 @@ DEPENDENCIES
   logger
   meta-tags
   mini_magick
+  nokogiri
   omniauth-twitter
   pry-rails
   puma (~> 3.11)

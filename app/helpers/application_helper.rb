@@ -14,4 +14,27 @@ module ApplicationHelper
     }
   end
 
+  def breadcrumb_list_json_ld
+    return if !respond_to?(:breadcrumbs) || breadcrumbs.blank?
+
+    items = breadcrumbs.each_with_index.map do |crumb, i|
+      name = crumb.respond_to?(:name) ? crumb.name : crumb[:name] || crumb[:label]
+      path = crumb.respond_to?(:path) ? crumb.path : crumb[:path]
+      path = crumb.url if path.blank? && crumb.respond_to?(:url)
+
+      item = {
+        "@type" => "ListItem",
+        "position" => i + 1,
+        "name" => name
+      }
+      item["item"] = path.present? ? "#{request.base_url}#{path}" : request.original_url
+      item
+    end
+
+    {
+      "@context" => "https://schema.org",
+      "@type" => "BreadcrumbList",
+      "itemListElement" => items
+    }.to_json
+  end
 end

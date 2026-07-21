@@ -383,7 +383,7 @@ br
         p
           | 自動販売機の電気代は各メーカーの提供する自動販売機により大きく異なります。省エネタイプの自動販売機の場合、1500~2000円ほどとなり、それ以外の自動販売機の場合は3000円〜4000円となります。
           br/
-          = link_to "自動販売機が撤去された場合は？", "https://xn--new351c2sh.net/columns/39", class:"btn btn-primary", target:"_blank"
+          = link_to "自販機の電気代はいくら？維持費を抑えて利益を残す方法", "/columns/vending-machine-electricity-cost", class:"btn btn-primary"
     .cp_actab.left
       input#cp_tabfour037[type="checkbox" name="tabs"]
       label[for="cp_tabfour037"]
@@ -471,6 +471,14 @@ br
      | \ カンタン60秒入力! /
    = link_to "/purchases/new" do
      =image_tag 'click3.webp', width: '70%', class: 'center', alt:"『自動販売機ねっと』の中古自動販売機をご利用ならこちらをクリック。簡単60秒で無料で自動販売機を一括比較見積もり"
+
+.row.tops-wrapper
+  h3.headline お役立ち記事
+  ul.sp-columns-seo__list
+    - featured_columns_for(:secondhand).each do |item|
+      li = link_to item[:title], item[:path]
+  p.sp-columns-seo__more.center
+    = link_to "記事一覧を見る", "/columns", class: "btn btn-primary"
 
 .row.tops-wrapper
   h3.headline 会社概要

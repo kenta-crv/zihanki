@@ -1,4 +1,6 @@
 class TopController < ApplicationController
+  before_action :set_breadcrumbs, except: [:index, :documents]
+
   def index
   end
 
@@ -85,4 +87,12 @@ class TopController < ApplicationController
   end
 
   def columns; end
+
+  private
+
+  def set_breadcrumbs
+    add_breadcrumb "トップ", root_path
+    label = TopHelper::LP_BREADCRUMB_LABELS[action_name]
+    add_breadcrumb label, request.path if label.present?
+  end
 end

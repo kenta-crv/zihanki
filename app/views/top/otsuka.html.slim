@@ -269,6 +269,15 @@ br
 br
 br
 
+
+.row.tops-wrapper
+  h3.headline お役立ち記事
+  ul.sp-columns-seo__list
+    - featured_columns_for(:top).each do |item|
+      li = link_to item[:title], item[:path]
+  p.sp-columns-seo__more.center
+    = link_to "記事一覧を見る", "/columns", class: "btn btn-primary"
+
 .row
   .col-sm-12.push
    span

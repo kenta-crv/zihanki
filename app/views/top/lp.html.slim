@@ -243,6 +243,14 @@ br
      =image_tag 'click3.webp', width: '70%', class: 'center', alt:"自販機の一括見積もりはこちらをクリック。簡単60秒で無料で一括比較見積もり"
 
 .row.tops-wrapper
+  h3.headline お役立ち記事
+  ul.sp-columns-seo__list
+    - featured_columns_for(:top).each do |item|
+      li = link_to item[:title], item[:path]
+  p.sp-columns-seo__more.center
+    = link_to "記事一覧を見る", "/columns", class: "btn btn-primary"
+
+.row.tops-wrapper
   h3.headline 会社概要
   table.company.responsive-table
    col.col-1

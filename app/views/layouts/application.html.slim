@@ -10,6 +10,9 @@ html
    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
    = display_meta_tags(default_meta_tags)
    = favicon_link_tag('favicon.ico')
+   - if defined?(breadcrumbs) && breadcrumbs.present?
+     script type="application/ld+json"
+       = raw(breadcrumb_list_json_ld)
    style 
     | :root {
     |   --main-color: #{main_color};
@@ -84,7 +87,7 @@ html
            li
              = link_to "大塚自動販売機", otsuka_path
            li
-             = link_to  '自販機記事一覧', '/estimates'
+             = link_to  'お役立ち記事', '/columns'
            li
              = link_to  '自販機設置相談', '/estimates/new'
 
