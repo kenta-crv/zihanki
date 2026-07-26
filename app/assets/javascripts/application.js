@@ -27,8 +27,8 @@ $(function() {
 
 // jsを再読み込みさせたいページで使う（/companies/pay）
 $(document).on("turbolinks:load", function () {
-  let path_name = location.pathname;
-  let path_search = location.search;
+  var path_name = location.pathname;
+  var path_search = location.search;
   if (path_search == '?reload=true') {
     window.location.href = path_name
   }
