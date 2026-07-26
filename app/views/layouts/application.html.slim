@@ -13,6 +13,15 @@ html
    - if defined?(breadcrumbs) && breadcrumbs.present?
      script type="application/ld+json"
        = raw(breadcrumb_list_json_ld)
+   - if controller_name == "top" && action_name == "index"
+     script type="application/ld+json"
+       = raw(organization_json_ld)
+     script type="application/ld+json"
+       = raw(website_json_ld)
+     - faq_ld = faq_page_json_ld(lp_faqs)
+     - if faq_ld.present?
+       script type="application/ld+json"
+         = raw(faq_ld)
    style 
     | :root {
     |   --main-color: #{main_color};
