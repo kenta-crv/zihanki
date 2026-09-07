@@ -1,0 +1,242 @@
+[
+  {
+    "filename": "bg-charms.webp",
+    "size": [
+      1920,
+      1400
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 109100
+  },
+  {
+    "filename": "bg-company.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 103460
+  },
+  {
+    "filename": "bg-compare.webp",
+    "size": [
+      1920,
+      1000
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 37068
+  },
+  {
+    "filename": "bg-hero.webp",
+    "size": [
+      1920,
+      1080
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 85088
+  },
+  {
+    "filename": "bg-pricing.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 88556
+  },
+  {
+    "filename": "bg-problems.webp",
+    "size": [
+      1920,
+      1400
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 65900
+  },
+  {
+    "filename": "bg-reviews.webp",
+    "size": [
+      1920,
+      1000
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 74828
+  },
+  {
+    "filename": "bg-service.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 122292
+  },
+  {
+    "filename": "bg-status.webp",
+    "size": [
+      1920,
+      1400
+    ],
+    "mode": "RGB",
+    "alpha": false,
+    "bytes": 97944
+  },
+  {
+    "filename": "boxes.webp",
+    "size": [
+      500,
+      500
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 76990
+  },
+  {
+    "filename": "company-visual.webp",
+    "size": [
+      900,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 634418
+  },
+  {
+    "filename": "glow-company.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 40174
+  },
+  {
+    "filename": "glow-hero.webp",
+    "size": [
+      1920,
+      1080
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 36526
+  },
+  {
+    "filename": "glow-pricing.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 40174
+  },
+  {
+    "filename": "glow-service.webp",
+    "size": [
+      1920,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 40174
+  },
+  {
+    "filename": "glow-status.webp",
+    "size": [
+      1920,
+      1400
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 45398
+  },
+  {
+    "filename": "man-worry.webp",
+    "size": [
+      700,
+      900
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 251148
+  },
+  {
+    "filename": "staff.webp",
+    "size": [
+      600,
+      400
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 151456
+  },
+  {
+    "filename": "vm-charms.webp",
+    "size": [
+      600,
+      400
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 98718
+  },
+  {
+    "filename": "vm-hero.webp",
+    "size": [
+      800,
+      1400
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 423190
+  },
+  {
+    "filename": "vm-new.webp",
+    "size": [
+      900,
+      1300
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 605026
+  },
+  {
+    "filename": "vm-old.webp",
+    "size": [
+      700,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 525470
+  },
+  {
+    "filename": "vm-pricing.webp",
+    "size": [
+      500,
+      1100
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 264290
+  },
+  {
+    "filename": "vm-service.webp",
+    "size": [
+      700,
+      1200
+    ],
+    "mode": "RGBA",
+    "alpha": true,
+    "bytes": 306480
+  }
+]

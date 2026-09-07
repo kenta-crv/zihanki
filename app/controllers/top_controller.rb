@@ -1,7 +1,11 @@
 class TopController < ApplicationController
-  before_action :set_breadcrumbs, except: [:index, :documents]
+  before_action :set_breadcrumbs, except: [:index, :documents, :renewal]
 
   def index
+  end
+
+  def renewal
+    render layout: 'renewal'
   end
 
   def lp
