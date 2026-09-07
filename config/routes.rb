@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :admins, only: [:show]
 
   root to: 'top#index' #トップページ
+  get 'renewal' => 'top#renewal'
   #特集
   get 'faq' => 'top#faq'
   get 'co' => 'top#co'

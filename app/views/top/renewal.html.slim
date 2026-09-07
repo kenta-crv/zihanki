@@ -1,0 +1,607 @@
+- set_meta_tags title: '自販機の設置・運用なら『自販機ねっと』'
+- set_meta_tags description: '設置から毎月の仕入れ、投函、運用までサポート。セミオペレーションに必要な仕組みをまとめて提供する自販機ねっと。'
+
+.rn
+  header.rn-header
+    .rn-inner.rn-header__bar
+      = link_to '/', class: 'rn-brand' do
+        = rn_logo
+        span 自販機ねっと
+      nav.rn-nav
+        = link_to 'サービス', '#service'
+        = link_to '導入フロー', '#flow'
+        = link_to '顧客レビュー', '#reviews'
+        = link_to 'FAQ', '#faq'
+        = link_to '/estimates/new', class: 'rn-nav__cta' do
+          | 無料相談
+      = link_to '/estimates/new', class: 'rn-btn rn-btn--grad rn-header__cta' do
+        | 無料相談
+      button.rn-burger type="button" aria-label="メニュー"
+        span
+        span
+        span
+
+  / ヒーロー
+  section.rn-hero#top
+    .rn-hero__bg style="background-image:url(#{image_path('bg-hero.webp')})"
+    .rn-hero__glow style="background-image:url(#{image_path('glow-hero.webp')})"
+    .rn-inner.rn-hero__grid
+      .rn-hero__copy
+        h1
+          | 設置後の運用まで、
+          br
+          | まるごとお任せ。
+        p.rn-lead
+          | 商品補充・在庫管理・稼働確認まで、必要な業務をサポート。
+        .rn-hero__actions
+          = link_to '/estimates/new', class: 'rn-btn rn-btn--grad' do
+            | 無料で設置相談
+            = rn_icon('chevron', html_class: 'rn-icon rn-icon--on-btn')
+          = link_to '#ops', class: 'rn-btn rn-btn--ghost' do
+            | 運用内容を見る
+            = rn_icon('chevron', html_class: 'rn-icon rn-icon--ghost')
+        ul.rn-pills
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('yen')
+            span 初期費用0円
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('gear')
+            span 管理不要
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('headset')
+            span 運用サポート
+      .rn-hero__visual
+        .rn-gauge
+          == %(<svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs><circle cx="60" cy="60" r="48" fill="none" stroke="rgba(37,99,235,.15)" stroke-width="10"/><circle class="rn-gauge__arc" cx="60" cy="60" r="48" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="296" stroke-dashoffset="18"/></svg>).html_safe
+          .rn-gauge__num
+            strong 98%
+            small 稼働率
+        = image_tag 'vm-hero.webp', class: 'rn-hero__vm', alt: '最新の自動販売機'
+        ul.rn-float-cards
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('box')
+            .rn-float-cards__txt
+              span 在庫状況
+              b.rn-ok 良好
+            = rn_icon('check', html_class: 'rn-icon rn-icon--ok')
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('truck')
+            .rn-float-cards__txt
+              span 商品補充
+              b 対応中
+            span.rn-spinner
+          li
+            span.rn-ico.rn-ico--blue = rn_icon('pin')
+            .rn-float-cards__txt
+              span 全国対応
+              b 日本全国
+
+  / 運用を見える化
+  section.rn-viz#ops
+    .rn-inner.rn-viz__panel
+      h2 運用を見える化
+      ol.rn-viz__flow
+        li
+          span.rn-ico.rn-ico--solid = rn_icon('phone')
+          span 稼働確認
+        li
+          span.rn-ico.rn-ico--solid = rn_icon('chart')
+          span 在庫管理
+        li
+          span.rn-ico.rn-ico--solid = rn_icon('truck')
+          span 商品補充
+        li
+          span.rn-ico.rn-ico--solid = rn_icon('headset')
+          span 運用サポート
+
+  / お任せください
+  section.rn-service#service
+    .rn-service__bg style="background-image:url(#{image_path('bg-service.webp')})"
+    .rn-service__glow style="background-image:url(#{image_path('glow-service.webp')})"
+    .rn-inner
+      .rn-service__head
+        h2 お任せください。
+        p 設置から毎月の仕入れ、投函、運用までサポート。
+      .rn-service__stage
+        article.rn-card.rn-card--feature.rn-service__tl
+          span.rn-ico.rn-ico--solid = rn_icon('headset')
+          h3 導入相談
+          p 設置場所の選定から最適なプランまで、丁寧にご提案します。
+        article.rn-card.rn-card--feature.rn-service__tr
+          span.rn-ico.rn-ico--solid = rn_icon('refresh-box')
+          h3 毎月仕入れ自動化
+          p 売上データをもとに最適な商品を自動で仕入れ・補充します。
+        .rn-service__machine
+          = image_tag 'vm-service.webp', alt: '自販機ねっとの自動販売機'
+        article.rn-card.rn-card--feature.rn-service__bl
+          span.rn-ico.rn-ico--solid = rn_icon('mail')
+          h3 投函サポート
+          p 商品のご案内やチラシを定期的に投函。集客をサポートします。
+        article.rn-card.rn-card--feature.rn-service__br
+          span.rn-ico.rn-ico--solid = rn_icon('chart')
+          h3 運用サポート
+          p 売上確認・トラブル対応・改善提案まで、運用をしっかり支えます。
+      .rn-service__cta-row
+        span.rn-price-badge
+          small 初期費用
+          strong 30万円
+        p 導入後も、ずっとサポート。お客様は “運用に集中” できます。
+        = link_to '/estimates/new', class: 'rn-btn rn-btn--grad' do
+          | 無料で相談する
+          = rn_icon('chevron', html_class: 'rn-icon rn-icon--on-btn')
+      ul.rn-trust
+        li
+          = rn_icon('shield')
+          span 全国対応可能
+        li
+          = rn_icon('gear')
+          span 専門スタッフが伴走支援
+        li
+          = rn_icon('heart-hands')
+          span 安心のアフターサポート
+
+  / お悩み
+  section.rn-problems#problems
+    .rn-problems__bg style="background-image:url(#{image_path('bg-problems.webp')})"
+    .rn-inner
+      .rn-sec-head
+        h2 こんなお悩みありませんか？
+        p 自動販売機を設置したくても、こんな壁が増えています。
+      .rn-problems__stage
+        article.rn-card.rn-card--problem
+          span.rn-ico.rn-ico--blue = rn_icon('doc-x')
+          h3
+            | メーカーに
+            em 設置を断られた
+          p 設置条件が厳しく、対応してもらえない…
+          span.rn-bang = rn_icon('exclaim')
+        article.rn-card.rn-card--problem
+          span.rn-ico.rn-ico--blue = rn_icon('people')
+          h3
+            em 投函作業の
+            | 人手が足りない
+          p ポスティングやチラシ配布の負担が大きい…
+          span.rn-bang = rn_icon('exclaim')
+        .rn-problems__photo
+          = image_tag 'man-worry.webp', alt: '設置に悩む担当者'
+          span.rn-ghost-vm
+        article.rn-card.rn-card--problem
+          span.rn-ico.rn-ico--blue = rn_icon('box')
+          h3
+            | 毎月の
+            em 仕入れが面倒
+          p 在庫管理や発注業務に時間がかかる…
+          span.rn-bang = rn_icon('exclaim')
+        article.rn-card.rn-card--problem
+          span.rn-ico.rn-ico--blue = rn_icon('question')
+          h3
+            em 運用方法が
+            | わからない
+          p 何から始めればよいかわからず不安…
+          span.rn-bang = rn_icon('exclaim')
+      .rn-problems__arrow = rn_icon('chevron')
+      .rn-solve
+        = rn_logo
+        strong 自販機ねっと
+        = rn_icon('sparkle', html_class: 'rn-icon rn-icon--spark')
+        span
+          | がすべて
+          b 解決
+          | します！
+
+  / 2026現状
+  section.rn-status#status
+    .rn-status__bg style="background-image:url(#{image_path('bg-status.webp')})"
+    .rn-status__glow style="background-image:url(#{image_path('glow-status.webp')})"
+    .rn-inner
+      .rn-status__head
+        span.rn-year 2026
+        h2 2026年自動販売機の現状
+        p メーカー設置から、セミオペレーションの時代へ。
+      .rn-status__story
+        .rn-status__past
+          = image_tag 'vm-old.webp', alt: '撤去が進む従来型の自販機'
+        .rn-status__arrow
+          span 転換期
+        .rn-status__now
+          = image_tag 'vm-new.webp', alt: '最新の自動販売機'
+          .rn-dash
+            h3 運用ダッシュボード
+            ul
+              li
+                span 稼働状況
+                b.rn-ok 良好
+                = rn_icon('check', html_class: 'rn-icon rn-icon--ok')
+              li
+                span 稼働率（全国平均）
+                b.rn-num 96.8%
+                == %(<svg class="rn-sparkline" viewBox="0 0 120 28" aria-hidden="true"><polyline points="0,22 20,18 40,16 60,12 80,10 100,7 120,5" fill="none" stroke="#2563eb" stroke-width="2.4"/></svg>).html_safe
+              li
+                span.rn-dash__ico = rn_icon('box')
+                span 在庫状況
+                b.rn-ok 適正在庫
+                = rn_icon('check', html_class: 'rn-icon rn-icon--ok')
+              li
+                span.rn-dash__ico = rn_icon('bell')
+                span アラート
+                b.rn-ok 異常なし
+                = rn_icon('check', html_class: 'rn-icon rn-icon--ok')
+          ul.rn-status__nodes
+            li = rn_icon('box')
+            li = rn_icon('wifi')
+            li = rn_icon('chart')
+      .rn-status__cards
+        article.rn-card
+          span.rn-num-badge 01
+          h3 現在メーカーは自販機を全国から撤去している
+          .rn-japan
+            = rn_icon('pin')
+            span 撤去が増加
+        article.rn-card
+          span.rn-num-badge 02
+          h3 新規でメーカー設置は大規模施設や駅以外不可能
+          .rn-status__illus
+            span.rn-ico.rn-ico--blue = rn_icon('factory')
+            span.rn-ico.rn-ico--blue = rn_icon('train')
+        article.rn-card
+          span.rn-num-badge 03
+          h3 時代はセミオペレーションで稼働する時代へ
+          .rn-status__net
+            span.rn-ico.rn-ico--solid = rn_icon('cloud')
+            ul
+              li = rn_icon('person')
+              li = rn_icon('chart')
+              li = rn_icon('truck')
+              li = rn_icon('factory')
+
+  / 魅力
+  section.rn-charms#charms
+    .rn-charms__bg style="background-image:url(#{image_path('bg-charms.webp')})"
+    .rn-inner
+      .rn-sec-head
+        h2 自販機ねっとの魅力
+        p セミオペレーションに必要な仕組みを、まとめて提供。
+      .rn-charms__grid
+        article.rn-glass
+          .rn-glass__top
+            span.rn-glass__no 01
+            span.rn-ico.rn-ico--blue = rn_icon('cube')
+          h3 初期費用
+          p.rn-glass__point 30万円
+          = image_tag 'vm-charms.webp', alt: '初期費用に含まれる自動販売機'
+          ul.rn-checks
+            li
+              = rn_icon('check')
+              | 低リスクでスタート可能
+            li
+              = rn_icon('check')
+              | 機器・システム込み
+            li
+              = rn_icon('check')
+              | 設置サポート付き
+        article.rn-glass
+          .rn-glass__top
+            span.rn-glass__no 02
+            span.rn-ico.rn-ico--blue = rn_icon('calendar')
+          h3 毎月仕入れ
+          p.rn-glass__point 自動化
+          .rn-cycle
+            .rn-cycle__item.rn-cycle__item--1
+              span.rn-ico.rn-ico--blue = rn_icon('clipboard')
+              small 発注
+            .rn-cycle__item.rn-cycle__item--2
+              span.rn-ico.rn-ico--blue = rn_icon('truck')
+            .rn-cycle__item.rn-cycle__item--3
+              span.rn-ico.rn-ico--blue = rn_icon('box')
+              small 納品
+            .rn-cycle__item.rn-cycle__item--4
+              span.rn-ico.rn-ico--blue = rn_icon('cube')
+          ul.rn-checks.rn-checks--chip
+            li
+              = rn_icon('check')
+              | 発注はシステムで自動管理
+            li
+              = rn_icon('check')
+              | 定期納品で切らさない
+            li
+              = rn_icon('check')
+              | 在庫データも見える化
+        article.rn-glass
+          .rn-glass__top
+            span.rn-glass__no 03
+            span.rn-ico.rn-ico--blue = rn_icon('headset')
+          h3 投函サポート
+          p.rn-glass__point あり
+          = image_tag 'staff.webp', alt: '専門スタッフによる補充・投函サポート'
+          ul.rn-checks
+            li
+              = rn_icon('check')
+              | 専門スタッフが定期訪問
+            li
+              = rn_icon('check')
+              | 商品補充・陳列までしっかり対応
+            li
+              = rn_icon('check')
+              | 運用の手間を最小化
+
+  / 比較
+  section.rn-compare#compare
+    .rn-compare__bg style="background-image:url(#{image_path('bg-compare.webp')})"
+    .rn-inner
+      .rn-sec-head
+        .rn-brand.rn-brand--center
+          = rn_logo
+          span 自販機ねっと
+        h2 他社比較
+        p 設置しやすさと運用負担を比較
+      .rn-table-wrap
+        .rn-table
+          .rn-table__row.rn-table__head
+            div
+            .rn-table__hl
+              = rn_logo(html_class: 'rn-logo-mark rn-logo-mark--sm')
+              | 自販機ねっと
+            .rn-table__std
+              = rn_icon('building')
+              | メーカー設置
+            .rn-table__std
+              = rn_icon('person')
+              | 完全自主運営
+          .rn-table__row
+            .rn-table__label
+              = rn_icon('pin')
+              | 新規設置
+            .rn-cell.rn-cell--good
+              = rn_icon('check')
+              | 相談可能
+            .rn-cell.rn-cell--warn
+              = rn_icon('warn')
+              | 設置条件あり
+            .rn-cell.rn-cell--mute
+              = rn_icon('person')
+              | 自社で手配
+          .rn-table__row
+            .rn-table__label
+              = rn_icon('yen')
+              | 初期費用
+            .rn-cell.rn-cell--price
+              = rn_icon('yen')
+              | 30万円
+            .rn-cell.rn-cell--warn
+              = rn_icon('warn')
+              | 要確認
+            .rn-cell.rn-cell--bad
+              = rn_icon('warn')
+              | 高額になりやすい
+          .rn-table__row
+            .rn-table__label
+              = rn_icon('cart')
+              | 毎月の仕入れ
+            .rn-cell.rn-cell--good
+              = rn_icon('check')
+              | 自動化
+            .rn-cell.rn-cell--good
+              = rn_icon('check')
+              | メーカー対応
+            .rn-cell.rn-cell--mute
+              = rn_icon('person')
+              | 自社対応
+          .rn-table__row
+            .rn-table__label
+              = rn_icon('inbox')
+              | 投函サポート
+            .rn-cell.rn-cell--good
+              = rn_icon('check')
+              | あり
+            .rn-cell.rn-cell--mute
+              = rn_icon('minus')
+              | なし
+            .rn-cell.rn-cell--mute
+              = rn_icon('minus')
+              | なし
+          .rn-table__row
+            .rn-table__label
+              = rn_icon('sliders')
+              | 運用の自由度
+            .rn-cell.rn-cell--good
+              = rn_icon('bullseye')
+              | 高い
+            .rn-cell.rn-cell--warn
+              = rn_icon('warn')
+              | 低い
+            .rn-cell.rn-cell--good
+              = rn_icon('bullseye')
+              | 高い
+      p.rn-note ※ 比較内容は各社・設置条件により異なります。
+
+  / 料金
+  section.rn-pricing#pricing
+    .rn-pricing__bg style="background-image:url(#{image_path('bg-pricing.webp')})"
+    .rn-pricing__glow style="background-image:url(#{image_path('glow-pricing.webp')})"
+    .rn-inner
+      .rn-sec-head
+        span.rn-label 料金案内
+        h2 わかりやすい導入プラン
+      .rn-pricing__stage
+        = image_tag 'vm-pricing.webp', class: 'rn-pricing__vm', alt: '導入プランに含まれる自動販売機'
+        .rn-price-card
+          h3 セミオペレーション導入プラン
+          span.rn-price-tag 初期費用
+          p.rn-price 300,000円
+          ul.rn-price-card__feats
+            li
+              span.rn-ico.rn-ico--solid = rn_icon('cart')
+              | 毎月仕入れ自動化
+            li
+              span.rn-ico.rn-ico--solid = rn_icon('mail')
+              | 投函サポート
+            li
+              span.rn-ico.rn-ico--solid = rn_icon('headset')
+              | 運用サポート
+          = link_to '/estimates/new', class: 'rn-btn rn-btn--grad rn-btn--wide' do
+            | 無料相談する
+            = rn_icon('chevron', html_class: 'rn-icon rn-icon--on-btn')
+          p.rn-note 設置条件・詳細はお問い合わせください。
+        .rn-pricing__side
+          span.rn-ico.rn-ico--float = rn_icon('truck')
+          = image_tag 'boxes.webp', class: 'rn-pricing__boxes', alt: '定期納品される商品'
+
+  / レビュー
+  section.rn-reviews#reviews
+    .rn-reviews__bg style="background-image:url(#{image_path('bg-reviews.webp')})"
+    .rn-inner
+      .rn-sec-head
+        span.rn-ico.rn-ico--solid = rn_icon('speech-star')
+        h2 顧客レビュー
+        p 導入されたお客様の声
+      .rn-reviews__grid
+        article.rn-card.rn-card--review
+          .rn-review__who
+            span.rn-avatar.rn-avatar--apron
+            div
+              b 飲食店オーナー
+              .rn-stars
+                - 5.times do
+                  = rn_icon('star')
+          p メーカーに断られた場所でも、導入まで相談できました。
+        article.rn-card.rn-card--review
+          .rn-review__who
+            span.rn-avatar.rn-avatar--suit
+            div
+              b オフィス管理者
+              .rn-stars
+                - 5.times do
+                  = rn_icon('star')
+          p 毎月の仕入れ作業が減り、本業に集中できています。
+        article.rn-card.rn-card--review
+          .rn-review__who
+            span.rn-avatar.rn-avatar--woman
+            div
+              b 施設運営担当者
+              .rn-stars
+                - 5.times do
+                  = rn_icon('star')
+          p 投函サポートがあり、運用開始後も安心でした。
+      p.rn-note ※レビュー内容はデザイン用サンプルです。
+
+  / FAQ
+  section.rn-faq#faq
+    .rn-inner
+      .rn-sec-head
+        span.rn-overline FAQ
+        h2 よくあるご質問
+        p 自販機ねっとに関してよくいただくご質問にお答えします。
+      .rn-faq-search
+        input.rn-faq-search__input type="search" placeholder="キーワードで検索（例：料金、設置、電気代など）" data-faq-search=""
+        svg.rn-faq-search__icon viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"
+          circle cx="11" cy="11" r="8"
+          line x1="21" y1="21" x2="16.65" y2="16.65"
+      .rn-faq-layout data-faq-root=""
+        nav.rn-faq-cats aria-label="FAQカテゴリ"
+          h3 カテゴリ
+          - rn_faq_categories.each_with_index do |(key, label, icon), idx|
+            button.rn-faq-cats__btn type="button" class=("is-active" if idx.zero?) data-faq-category=key
+              = rn_icon(icon)
+              span = label
+              = rn_icon('chevron', html_class: 'rn-icon rn-faq-cats__chevron')
+        .rn-faq-panel
+          - lp_faqs.each_with_index do |item, idx|
+            details.rn-faq-panel__item class=("is-open-default" if idx.zero?) data-faq-item=item[:cat] open=(idx.zero? || nil)
+              summary.rn-faq-panel__q = item[:q]
+              p.rn-faq-panel__a = item[:a]
+      .rn-faq-contact
+        p 解決しない場合は、お気軽にお問い合わせください。
+        = link_to '/estimates/new', class: 'rn-btn rn-btn--grad' do
+          = rn_icon('mail', html_class: 'rn-icon rn-icon--on-btn')
+          | お問い合わせ
+
+  / 導入フロー
+  section.rn-ops#flow
+    .rn-inner
+      .rn-sec-head
+        h2 導入フロー
+        p ご利用から設置までの4STEP
+      ol.rn-flow
+        li
+          span.rn-flow__no STEP.01
+          span.rn-ico.rn-ico--solid = rn_icon('clipboard')
+          h3 カンタン60秒見積もり入力
+          p まずは下記の一括見積もりをクリックいただき、ご希望内容や希望の条件をカンタン入力。お問い合わせには一切費用をいただきません。
+        li
+          span.rn-flow__no STEP.02
+          span.rn-ico.rn-ico--solid = rn_icon('pin')
+          h3 現地調査開始
+          p 各メーカーに情報共有を行い、現地調査を開始させていただきます。現地調査は屋外の場合は立ち会いは不要で対応させていただき、屋内の場合にも最小限の対応でお客様にお手間は取らせません。
+        li
+          span.rn-flow__no STEP.03
+          span.rn-ico.rn-ico--solid = rn_icon('chart')
+          h3 各社見積りから自動販売機会社を決定
+          p 自動販売機ねっとが各社の設置条件をまとめてご案内致しますので、ご希望の自動販売機会社をご選択ください。尚、各社自動販売機会社のお見積もりが出るまでは1週間〜2週間ほど頂いております。
+        li
+          span.rn-flow__no STEP.04
+          span.rn-ico.rn-ico--solid = rn_icon('check')
+          h3 内容決定後、設置完了
+          p 自動販売機メーカーが決定したら、ドリンクセレクションのチョイスと設置日調整に入ります。自動販売機の設置搬入を行えば、当日より自動販売機をご利用いただくことができます。
+      .rn-ops__cta
+        = link_to '/estimates/new', class: 'rn-btn rn-btn--grad' do
+          | 無料で設置相談
+          = rn_icon('chevron', html_class: 'rn-icon rn-icon--on-btn')
+
+  / 会社概要
+  section.rn-company#company
+    .rn-company__bg style="background-image:url(#{image_path('bg-company.webp')})"
+    .rn-company__glow style="background-image:url(#{image_path('glow-company.webp')})"
+    .rn-inner.rn-company__grid
+      .rn-company__copy
+        .rn-brand
+          = rn_logo
+          span 自販機ねっと
+        h2 会社概要
+        p.rn-lead 自販機ねっとを運営する会社について
+        .rn-info
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('building')
+            span.label 会社名
+            span.value 〇〇株式会社
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('person')
+            span.label 代表者
+            span.value 〇〇 〇〇
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('pin')
+            span.label 所在地
+            span.value 〒000-0000 東京都〇〇区〇〇
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('calendar')
+            span.label 設立
+            span.value 20XX年X月
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('chart')
+            span.label 事業内容
+            span.value 自動販売機関連事業
+          .rn-info__row
+            span.rn-ico.rn-ico--blue = rn_icon('mail')
+            span.label お問い合わせ
+            = link_to '/estimates/new', class: 'value rn-ext' do
+              | お問い合わせフォーム
+              = rn_icon('link-ext', html_class: 'rn-icon rn-icon--sm')
+        = link_to '/estimates/new', class: 'rn-btn rn-btn--grad rn-btn--wide' do
+          = rn_icon('mail', html_class: 'rn-icon rn-icon--on-btn')
+          | お問い合わせ
+          = rn_icon('chevron', html_class: 'rn-icon rn-icon--on-btn')
+        p.rn-note.rn-note--ok
+          = rn_icon('check', html_class: 'rn-icon rn-icon--ok')
+          | ※会社情報は差し替え用サンプルです。
+      .rn-company__visual
+        = image_tag 'company-visual.webp', alt: '自販機ねっとを運営するオフィスと自動販売機'
+
+  footer.rn-footer
+    .rn-inner
+      .rn-brand
+        = rn_logo
+        span 自販機ねっと
+      nav
+        = link_to '会社概要', '#company'
+        = link_to 'プライバシーポリシー', privacy_path
+        = link_to '無料相談', '/estimates/new'
+      small © Jihanki Net

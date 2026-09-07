@@ -1,0 +1,98 @@
+doctype html
+html lang="ja"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    = csrf_meta_tags
+    link rel="preconnect" href="https://fonts.googleapis.com"
+    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"
+    link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"
+    = stylesheet_link_tag 'renewal', media: 'all', 'data-turbolinks-track': 'reload'
+    = display_meta_tags(default_meta_tags)
+    = favicon_link_tag('favicon.ico')
+    - if controller_name == "top" && action_name == "renewal"
+      script type="application/ld+json"
+        = raw(organization_json_ld)
+      script type="application/ld+json"
+        = raw(website_json_ld)
+      - faq_ld = faq_page_json_ld(lp_faqs)
+      - if faq_ld.present?
+        script type="application/ld+json"
+          = raw(faq_ld)
+    script async=true src="https://www.googletagmanager.com/gtag/js?id=G-8TH2BJHDNP"
+    script
+      |
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8TH2BJHDNP');
+        gtag('config', 'AW-10998015402');
+  body.rn-body
+    = yield
+    javascript:
+      document.addEventListener('DOMContentLoaded', function () {
+        var burger = document.querySelector('.rn-burger');
+        var nav = document.querySelector('.rn-nav');
+        if (burger && nav) {
+          burger.addEventListener('click', function () {
+            burger.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+          });
+          nav.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+              burger.classList.remove('is-open');
+              nav.classList.remove('is-open');
+            });
+          });
+        }
+
+        var root = document.querySelector('[data-faq-root]');
+        var searchInput = document.querySelector('[data-faq-search]');
+        var items = document.querySelectorAll('.rn-faq-panel__item');
+        if (searchInput && items.length) {
+          var categoryBtns = root ? root.querySelectorAll('[data-faq-category]') : [];
+          var activeCategory = '';
+          function applyFilters() {
+            var q = searchInput.value.trim().toLowerCase();
+            items.forEach(function (item) {
+              var category = item.getAttribute('data-faq-item') || '';
+              var text = item.textContent.toLowerCase();
+              var matchCategory = !activeCategory || category === activeCategory;
+              var matchSearch = !q || text.indexOf(q) !== -1;
+              var show = matchCategory && matchSearch;
+              item.classList.toggle('is-hidden', !show);
+              item.style.display = show ? '' : 'none';
+            });
+          }
+          function setCategory(category) {
+            activeCategory = category;
+            categoryBtns.forEach(function (btn) {
+              btn.classList.toggle('is-active', btn.getAttribute('data-faq-category') === category);
+            });
+            items.forEach(function (item) {
+              if (item.open && item.getAttribute('data-faq-item') !== category) item.open = false;
+            });
+            applyFilters();
+          }
+          categoryBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              setCategory(btn.getAttribute('data-faq-category'));
+            });
+          });
+          searchInput.addEventListener('input', applyFilters);
+          items.forEach(function (item) {
+            item.addEventListener('toggle', function () {
+              if (!item.open) return;
+              items.forEach(function (other) {
+                if (other !== item) other.open = false;
+              });
+            });
+          });
+          if (categoryBtns.length) {
+            setCategory(categoryBtns[0].getAttribute('data-faq-category'));
+          } else {
+            applyFilters();
+          }
+        }
+      });
