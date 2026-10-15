@@ -3,7 +3,7 @@ module ApplicationHelper
     {
       site: "",
       title:"<%= yield(:title) | 自販機ねっと' %>",
-      description: "自動販売機の一括比較見積もりなら『自販機ねっと』。条件の良い自販機会社を手軽に見積りできます。",
+      description: "初期費用とサブスク利用で自動販売機を設置・運用するなら『自販機ねっと』。仕入れから投函、運用までまとめてサポートします。",
       charset: "UTF-8",
       reverse: true,
       separator: '|',

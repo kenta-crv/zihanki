@@ -1,24 +1,24 @@
 module TopHelper
   FEATURED_COLUMNS = {
     top: [
-      { title: "自販機設置にかかる費用はいくら？初期費用・維持費完全解説", path: "/columns/vending-machine-costs" },
-      { title: "自販機の電気代はいくら？維持費を抑えて利益を残す方法", path: "/columns/vending-machine-electricity-cost" },
-      { title: "自販機オーナーの利益率は？売上・年収・収益構造を徹底解説", path: "/columns/vending-machine-profit-margin" },
+      { title: "自販機の初期費用・維持費・収益シミュレーション完全ガイド", path: "/columns/vending-cost-revenue-simulation-complete-guide" },
+      { title: "自動販売機のサイズで電気代は変わる？大型・小型の違い", path: "/columns/vending-machine-electricity-cost-size-vender" },
+      { title: "自販機オーナーは本当に儲かる？利益最大化の収益戦略大全", path: "/columns/vending-machine-profit-strategies" },
       { title: "故障・売上低下を防ぐ｜自動販売機メンテナンス完全ガイド", path: "/columns/vending-machine-maintenance-guide" },
       { title: "キャッシュレス対応自販機の導入方法｜売上アップを実現する最新戦略", path: "/columns/cashless-vending-machine-introduction" }
     ],
     secondhand: [
-      { title: "副業で始める自販機ビジネス｜初心者でも収益化できる運営方法", path: "/columns/vending-machine-business" },
-      { title: "自販機オーナーの利益率は？売上・年収・収益構造を徹底解説", path: "/columns/vending-machine-profit-margin" },
-      { title: "自販機設置にかかる費用はいくら？初期費用・維持費完全解説", path: "/columns/vending-machine-costs" },
+      { title: "副業で自販機経営は成立する？会社員が始める際の注意点", path: "/columns/vending-machine-vender" },
+      { title: "自販機オーナーは本当に儲かる？利益最大化の収益戦略大全", path: "/columns/vending-machine-profit-strategies" },
+      { title: "自販機の初期費用・維持費・収益シミュレーション完全ガイド", path: "/columns/vending-cost-revenue-simulation-complete-guide" },
       { title: "故障・売上低下を防ぐ｜自動販売機メンテナンス完全ガイド", path: "/columns/vending-machine-maintenance-guide" },
-      { title: "自販機の電気代はいくら？維持費を抑えて利益を残す方法", path: "/columns/vending-machine-electricity-cost" }
+      { title: "自動販売機のサイズで電気代は変わる？大型・小型の違い", path: "/columns/vending-machine-electricity-cost-size-vender" }
     ],
     food: [
-      { title: "副業で始める自販機ビジネス｜初心者でも収益化できる運営方法", path: "/columns/vending-machine-business" },
-      { title: "自販機設置にかかる費用はいくら？初期費用・維持費完全解説", path: "/columns/vending-machine-costs" },
+      { title: "副業で自販機経営は成立する？会社員が始める際の注意点", path: "/columns/vending-machine-vender" },
+      { title: "自販機の初期費用・維持費・収益シミュレーション完全ガイド", path: "/columns/vending-cost-revenue-simulation-complete-guide" },
       { title: "故障・売上低下を防ぐ｜自動販売機メンテナンス完全ガイド", path: "/columns/vending-machine-maintenance-guide" },
-      { title: "自販機オーナーの利益率は？売上・年収・収益構造を徹底解説", path: "/columns/vending-machine-profit-margin" },
+      { title: "自販機オーナーは本当に儲かる？利益最大化の収益戦略大全", path: "/columns/vending-machine-profit-strategies" },
       { title: "キャッシュレス対応自販機の導入方法｜売上アップを実現する最新戦略", path: "/columns/cashless-vending-machine-introduction" }
     ]
   }.freeze
